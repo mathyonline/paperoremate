@@ -1,1 +1,651 @@
+<!DOCTYPE html> 
 
+<html lang="en"> 
+
+<head> 
+
+    <meta charset="UTF-8"> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <title>Printing Tips for Best Results</title> 
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Lato:wght@300;400;500;600&display=swap" rel="stylesheet"> 
+
+    <style> 
+
+        * { 
+
+            margin: 0; 
+
+            padding: 0; 
+
+            box-sizing: border-box; 
+
+        } 
+
+ 
+
+        body { 
+
+            font-family: 'Lato', sans-serif; 
+
+            background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 50%, #f3e8ff 100%); 
+
+            min-height: 100vh; 
+
+            color: #6b21a8; 
+
+            line-height: 1.6; 
+
+        } 
+
+ 
+
+        .container { 
+
+            max-width: 900px; 
+
+            margin: 0 auto; 
+
+            padding: 2rem; 
+
+        } 
+
+ 
+
+        .header { 
+
+            text-align: center; 
+
+            margin-bottom: 3rem; 
+
+            padding: 2rem 0; 
+
+        } 
+
+ 
+
+        .main-title { 
+
+            font-family: 'Dancing Script', cursive; 
+
+            font-size: 3.5rem; 
+
+            font-weight: 700; 
+
+            color: #be185d; 
+
+            margin-bottom: 1rem; 
+
+            text-shadow: 2px 2px 4px rgba(190, 24, 93, 0.1); 
+
+        } 
+
+ 
+
+        .subtitle { 
+
+            font-size: 1.2rem; 
+
+            color: #7c3aed; 
+
+            font-weight: 300; 
+
+            max-width: 600px; 
+
+            margin: 0 auto; 
+
+        } 
+
+ 
+
+        .content-grid { 
+
+            display: grid; 
+
+            gap: 2rem; 
+
+            margin-bottom: 2rem; 
+
+        } 
+
+ 
+
+        .tip-section { 
+
+            background: rgba(255, 255, 255, 0.7); 
+
+            backdrop-filter: blur(10px); 
+
+            border-radius: 20px; 
+
+            padding: 2rem; 
+
+            box-shadow: 0 8px 32px rgba(190, 24, 93, 0.1); 
+
+            border: 1px solid rgba(255, 255, 255, 0.3); 
+
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+
+        } 
+
+ 
+
+        .tip-section:hover { 
+
+            transform: translateY(-5px); 
+
+            box-shadow: 0 12px 40px rgba(190, 24, 93, 0.15); 
+
+        } 
+
+ 
+
+        .section-title { 
+
+            font-family: 'Dancing Script', cursive; 
+
+            font-size: 2.2rem; 
+
+            font-weight: 600; 
+
+            color: #be185d; 
+
+            margin-bottom: 1rem; 
+
+            display: flex; 
+
+            align-items: center; 
+
+            gap: 0.5rem; 
+
+        } 
+
+ 
+
+        .section-emoji { 
+
+            font-size: 2rem; 
+
+        } 
+
+ 
+
+        .tip-item { 
+
+            margin-bottom: 1.5rem; 
+
+        } 
+
+ 
+
+        .tip-title { 
+
+            font-weight: 600; 
+
+            color: #7c3aed; 
+
+            font-size: 1.1rem; 
+
+            margin-bottom: 0.5rem; 
+
+        } 
+
+ 
+
+        .tip-description { 
+
+            color: #6b21a8; 
+
+            margin-left: 1rem; 
+
+            font-weight: 400; 
+
+        } 
+
+ 
+
+        .highlight-box { 
+
+            background: linear-gradient(135deg, #fce7f3 0%, #f3e8ff 100%); 
+
+            border-left: 4px solid #be185d; 
+
+            padding: 1.5rem; 
+
+            border-radius: 0 15px 15px 0; 
+
+            margin: 1.5rem 0; 
+
+        } 
+
+ 
+
+        .extra-tips { 
+
+            background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%); 
+
+            border-radius: 20px; 
+
+            padding: 2rem; 
+
+            margin-top: 2rem; 
+
+            border: 2px solid rgba(190, 24, 93, 0.2); 
+
+        } 
+
+ 
+
+        .tip-list { 
+
+            list-style: none; 
+
+            padding: 0; 
+
+        } 
+
+ 
+
+        .tip-list li { 
+
+            padding: 0.5rem 0; 
+
+            position: relative; 
+
+            padding-left: 1.5rem; 
+
+        } 
+
+ 
+
+        .tip-list li::before { 
+
+            content: "✨"; 
+
+            position: absolute; 
+
+            left: 0; 
+
+            color: #be185d; 
+
+        } 
+
+ 
+
+        .decorative-element { 
+
+            position: absolute; 
+
+            opacity: 0.1; 
+
+            pointer-events: none; 
+
+        } 
+
+ 
+
+        .flower-1 { 
+
+            top: 10%; 
+
+            right: 10%; 
+
+            font-size: 4rem; 
+
+            color: #be185d; 
+
+            animation: float 6s ease-in-out infinite; 
+
+        } 
+
+ 
+
+        .flower-2 { 
+
+            bottom: 20%; 
+
+            left: 5%; 
+
+            font-size: 3rem; 
+
+            color: #7c3aed; 
+
+            animation: float 8s ease-in-out infinite reverse; 
+
+        } 
+
+ 
+
+        @keyframes float { 
+
+            0%, 100% { transform: translateY(0px) rotate(0deg); } 
+
+            50% { transform: translateY(-20px) rotate(5deg); } 
+
+        } 
+
+ 
+
+        @media (max-width: 768px) { 
+
+            .container { 
+
+                padding: 1rem; 
+
+            } 
+
+             
+
+            .main-title { 
+
+                font-size: 2.5rem; 
+
+            } 
+
+             
+
+            .section-title { 
+
+                font-size: 1.8rem; 
+
+            } 
+
+             
+
+            .tip-section { 
+
+                padding: 1.5rem; 
+
+            } 
+
+        } 
+
+ 
+
+        .back-to-top { 
+
+            position: fixed; 
+
+            bottom: 2rem; 
+
+            right: 2rem; 
+
+            background: linear-gradient(135deg, #be185d, #7c3aed); 
+
+            color: white; 
+
+            border: none; 
+
+            border-radius: 50%; 
+
+            width: 50px; 
+
+            height: 50px; 
+
+            font-size: 1.2rem; 
+
+            cursor: pointer; 
+
+            box-shadow: 0 4px 20px rgba(190, 24, 93, 0.3); 
+
+            transition: all 0.3s ease; 
+
+            opacity: 0; 
+
+            transform: translateY(100px); 
+
+        } 
+
+ 
+
+        .back-to-top.visible { 
+
+            opacity: 1; 
+
+            transform: translateY(0); 
+
+        } 
+
+ 
+
+        .back-to-top:hover { 
+
+            transform: translateY(-5px); 
+
+            box-shadow: 0 8px 30px rgba(190, 24, 93, 0.4); 
+
+        } 
+
+    </style> 
+
+</head> 
+
+<body> 
+
+    <div class="decorative-element flower-1">🌸</div> 
+
+    <div class="decorative-element flower-2">🌺</div> 
+
+     
+
+    <div class="container"> 
+
+        <div class="header"> 
+
+            <h1 class="main-title">🖨️ Printing Tips for Best Results</h1> 
+
+            <p class="subtitle">Here are some simple tips to help you get the most out of your printables</p> 
+
+        </div> 
+
+ 
+
+        <div class="content-grid"> 
+
+            <div class="tip-section"> 
+
+                <h2 class="section-title"> 
+
+                    <span class="section-emoji">📄</span> 
+
+                    Paper Choice 
+
+                </h2> 
+
+                 
+
+                <div class="tip-item"> 
+
+                    <div class="tip-title">Planners & Trackers:</div> 
+
+                    <div class="tip-description">Use regular copy paper (80–100 gsm) for everyday writing, or premium smooth paper (100–120 gsm) if you want thicker, no-bleed pages.</div> 
+
+                </div> 
+
+                 
+
+                <div class="tip-item"> 
+
+                    <div class="tip-title">Posters & Certificates:</div> 
+
+                    <div class="tip-description">Best on cardstock (200–250 gsm) for sturdiness.</div> 
+
+                </div> 
+
+                 
+
+                <div class="tip-item"> 
+
+                    <div class="tip-title">Bookmarks:</div> 
+
+                    <div class="tip-description">Print on thick cardstock (250+ gsm), or laminate for durability.</div> 
+
+                </div> 
+
+                 
+
+                <div class="tip-item"> 
+
+                    <div class="tip-title">Stickers:</div> 
+
+                    <div class="tip-description">Use matte or glossy sticker paper (inkjet or laser, depending on your printer).</div> 
+
+                </div> 
+
+            </div> 
+
+ 
+
+            <div class="tip-section"> 
+
+                <h2 class="section-title"> 
+
+                    <span class="section-emoji">🎨</span> 
+
+                    Print Settings 
+
+                </h2> 
+
+                 
+
+                <ul class="tip-list"> 
+
+                    <li>Set printer to "Actual Size" or 100% scale (avoid "Fit to Page")</li> 
+
+                    <li>Choose High Quality / Best Print for sharp colors</li> 
+
+                    <li>Select Color Printing to keep pastel tones vibrant</li> 
+
+                </ul> 
+
+            </div> 
+
+ 
+
+            <div class="tip-section"> 
+
+                <h2 class="section-title"> 
+
+                    <span class="section-emoji">✂️</span> 
+
+                    Cutting & Finishing 
+
+                </h2> 
+
+                 
+
+                <ul class="tip-list"> 
+
+                    <li>Use a paper trimmer or sharp scissors for clean edges</li> 
+
+                    <li>Lamination helps bookmarks and covers last longer</li> 
+
+                    <li>For planners, consider punching holes or using a binding machine to create a booklet</li> 
+
+                </ul> 
+
+            </div> 
+
+        </div> 
+
+ 
+
+        <div class="extra-tips"> 
+
+            <h2 class="section-title"> 
+
+                <span class="section-emoji">💡</span> 
+
+                Extra Tips 
+
+            </h2> 
+
+             
+
+            <div class="highlight-box"> 
+
+                <ul class="tip-list"> 
+
+                    <li>If colors print too dark, reduce ink or adjust brightness in settings</li> 
+
+                    <li>For planners, test print a single page first to check your preferred paper weight</li> 
+
+                    <li>Keep files safe so you can reprint anytime for fresh pages!</li> 
+
+                </ul> 
+
+            </div> 
+
+        </div> 
+
+    </div> 
+
+ 
+
+    <button class="back-to-top" onclick="scrollToTop()">↑</button> 
+
+ 
+
+    <script> 
+
+        // Back to top button functionality 
+
+        window.addEventListener('scroll', function() { 
+
+            const backToTop = document.querySelector('.back-to-top'); 
+
+            if (window.pageYOffset > 300) { 
+
+                backToTop.classList.add('visible'); 
+
+            } else { 
+
+                backToTop.classList.remove('visible'); 
+
+            } 
+
+        }); 
+
+ 
+
+        function scrollToTop() { 
+
+            window.scrollTo({ 
+
+                top: 0, 
+
+                behavior: 'smooth' 
+
+            }); 
+
+        } 
+
+ 
+
+        // Add subtle hover effects to tip sections 
+
+        document.querySelectorAll('.tip-section').forEach(section => { 
+
+            section.addEventListener('mouseenter', function() { 
+
+                this.style.transform = 'translateY(-5px)'; 
+
+            }); 
+
+             
+
+            section.addEventListener('mouseleave', function() { 
+
+                this.style.transform = 'translateY(0)'; 
+
+            }); 
+
+        }); 
+
+    </script> 
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97296e1f44227c18',t:'MTc1NTc3MTk2NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body> 
+
+</html> 
